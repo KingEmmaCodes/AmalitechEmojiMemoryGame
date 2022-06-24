@@ -1,3 +1,106 @@
-.game-grid{
+@font-face {
+    font-family: 'atkinson';
+    src: url('/assets/fonts/AtkinsonHyperlegible-Regular.ttf');
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fff;
+    margin: auto;
+    font-family: 'atkinson';
+    margin: 20px 50px;
+}
+
+nav {
     display: flex;
+    justify-content: space-between;
+}
+
+.memory{
+    font-size: 2rem;
+    color:#152938;
+}
+
+.game-control {
+    display: flex;
+    column-gap: 10px;
+}
+
+.restart{
+    background-color: #FDA214;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 0;
+    color: #f2f2f2;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.restart:hover{
+    opacity: 0.7;
+}
+
+.new-game{
+    background-color: #DFE7EC;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 0;
+    color:#152938;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.new-game:hover{
+    background-color: #6395B8;
+    color: #f2f2f2;
+}
+.game-grid{
+    margin: 50px 0px;
+    display: flex;
+    border: 1px solid palevioletred;
+    height: 400px;
+    width: 400px;
+}
+
+.scorecard {
+    display: flex;
+    justify-content: space-between;
+}
+.player {
+    background-color: #DFE7EC;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    width: 20%;
+    color: #7191A5;
+}
+
+#currentplayer {
+    background-color: #FDA214;
+    color: #f2f2f2;
+    position: relative;
+}
+
+#currentplayer:after {
+	content: "";
+	position: absolute;
+    top:-25%;
+    left: 40%;
+	width: 0;
+	height: 0;
+	border-left: 13px solid transparent;
+	border-right: 13px solid transparent;
+	border-bottom: 13px solid #FDA214;
+}
+
+.player-text {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.score {
+    color: #304859;
 }

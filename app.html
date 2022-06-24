@@ -8,10 +8,39 @@
     <title>Memory Game</title>
 </head>
 <body>
-
+    <nav>
+        <div class="logo">
+            <h1 class="memory">memory</h1>
+        </div>
+        <div class="game-control">
+            <button class="restart">Restart</button>
+            <button class="new-game">New Game</button>
+        </div>
+    </nav>
     <div class="game-grid">
 
     </div>
+
+    <div class="scorecard">
+        <div class="player player1">
+            <p class="player-text">Player 1</p>
+            <span class="score">0</span>
+        </div>
+        <div class="player player2" >
+            <p class="player-text">Player 2</p>
+            <span class="score">0</span>
+        </div>
+        <div class="player player3" id="currentplayer">
+            <p class="player-text">Player 3</p>
+            <span class="score">0</span>
+        </div>
+        <div class="player player4">
+            <p class="player-text">Player 4</p>
+            <span class="score">0</span>
+        </div>
+    </div>
+
+
 <script src="/assets/js/app.js"></script>
 </body>
 </html>
