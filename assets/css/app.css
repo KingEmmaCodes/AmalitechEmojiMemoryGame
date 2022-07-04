@@ -19,9 +19,8 @@ nav {
     justify-content: space-between;
 }
 
-.memory{
-    font-size: 2rem;
-    color:#152938;
+.logo {
+    padding: 10px;
 }
 
 .game-control {
@@ -30,17 +29,18 @@ nav {
 }
 
 .restart{
-    background-color: #FDA214;
+    background-color: #fda214;
     padding: 10px 20px;
     border-radius: 30px;
     border: 0;
     color: #f2f2f2;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .restart:hover{
     opacity: 0.7;
+    cursor: pointer;
 }
 
 .new-game{
@@ -49,21 +49,41 @@ nav {
     border-radius: 30px;
     border: 0;
     color:#152938;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .new-game:hover{
     background-color: #6395B8;
     color: #f2f2f2;
+    cursor: pointer;
 }
 .game-grid{
-    margin: 50px 0px;
+    margin: 50px auto;
     display: flex;
+    flex-wrap: wrap;
     border: 1px solid palevioletred;
-    height: 400px;
-    width: 400px;
+    height: max-content;
+    max-width: 600px;
+    justify-content: space-between;
 }
+
+.game-grid div {
+    height: 90px;
+    width: 90px;
+    background-color: #152938;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 5px 0px;
+    text-align: center;
+    
+}
+
+.game-grid i {
+    color: white;
+    font-size: 3rem;
+}
+
 
 .scorecard {
     display: flex;
@@ -73,10 +93,12 @@ nav {
     background-color: #DFE7EC;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 25px;
     border-radius: 5px;
     width: 20%;
     color: #7191A5;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 #currentplayer {
@@ -92,15 +114,72 @@ nav {
     left: 40%;
 	width: 0;
 	height: 0;
-	border-left: 13px solid transparent;
-	border-right: 13px solid transparent;
-	border-bottom: 13px solid #FDA214;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 30px solid #FDA214;
+    
 }
 
-.player-text {
-    font-size: 0.8rem;
-    font-weight: bold;
-}
 .score {
     color: #304859;
+}
+
+.timer-moves {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+}
+.keeper {
+    background-color: #DFE7EC;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 5px;
+    width: 45%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.timetext {
+    color: #7191A5;
+}
+
+#timer, #moves-tracker {
+    color: #304859;
+}
+
+
+@media only screen and (max-width:992px){
+
+
+    .new-game{
+        font-size: 1.1rem;
+    }
+
+    .restart{
+        font-size: 1.1rem;
+    }
+    .player {
+        padding: 10px;
+        border-radius: 5px;
+        width: 20%;
+        color: #7191A5;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .player {
+        flex-direction: column;
+    }
+    .score {
+        margin-top: 5px;
+    }
+
+    #currentplayer:after {
+        
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        border-bottom: 13px solid #FDA214;
+    }
 }

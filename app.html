@@ -5,42 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/app.css">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" rel="stylesheet">
     <title>Memory Game</title>
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <h1 class="memory">memory</h1>
-        </div>
-        <div class="game-control">
-            <button class="restart">Restart</button>
-            <button class="new-game">New Game</button>
-        </div>
-    </nav>
-    <div class="game-grid">
 
-    </div>
+      <!-- Game setup start -->
 
-    <div class="scorecard">
-        <div class="player player1">
-            <p class="player-text">Player 1</p>
-            <span class="score">0</span>
-        </div>
-        <div class="player player2" >
-            <p class="player-text">Player 2</p>
-            <span class="score">0</span>
-        </div>
-        <div class="player player3" id="currentplayer">
-            <p class="player-text">Player 3</p>
-            <span class="score">0</span>
-        </div>
-        <div class="player player4">
-            <p class="player-text">Player 4</p>
-            <span class="score">0</span>
-        </div>
-    </div>
+      <section id="setup" class="bg-white setup">
+        <form class="setup-form game-options" name="game-options">
+            <h2 class="panel-title">Select Theme</h2>
+            <div class="panel-form panel__theme">
+                <div class="input-radio form-group">
+                    <input type="radio" id="theme-numbers" name="theme" value="numbers" checked="checked" />
+                    <label for="theme-numbers">Numbers</label>
+                </div>
+                <div class="input-radio form-group">
+                    <input type="radio" id="theme-icons" name="theme" value="icons" />
+                    <label for="theme-icons">Icons</label>
+                </div>
+            </div>
+            <h2 class="panel-title">Numbers of players</h2>
+            <div class="panel-form panel__players">
+                <div class="input-radio form-group">
+                    <input type="radio" id="players-one" name="players" value="1" checked="checked" />
+                    <label for="players-one">1</label>
+                </div>
+                <div class="input-radio form-group">
+                    <input type="radio" id="players-two" name="players" value="2" />
+                    <label for="players-two">2</label>
+                </div>
+                <div class="input-radio form-group">
+                    <input type="radio" id="players-three" name="players" value="3" />
+                    <label for="players-three">3</label>
+                </div>
+                <div class="input-radio form-group">
+                    <input type="radio" id="players-four" name="players" value="4" />
+                    <label for="players-four">4</label>
+                </div>
+            </div>
+            <h2 class="panel-title">Grid Size</h2>
+            <div class="panel-form panel__size">
+                <div class="input-radio form-group">
+                    <input type="radio" id="size-four" name="size" value="4" checked="checked" />
+                    <label for="size-four">4x4</label>
+                </div>
+                <div class="input-radio form-group">
+                    <input type="radio" id="size-six" name="size" value="6" />
+                    <label for="size-six">6x6</label>
+                </div>
+            </div>
+            <div class="panel-submit panel__start">
+                <div class="input-radio form-group">
+                    <button class="start-game" type="submit">Start Game</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+  <!-- Game setup end -->
 
 
-<script src="/assets/js/app.js"></script>
+
+  <!-- Game board start -->
+
+  Restart
+  New Game
+
+  <!-- Multiplayer scores start -->
+
+  Player 1
+  <!-- P1 score -->
+  Current Turn
+
+  Player 2
+  <!-- P2 score -->
+  Current Turn
+
+  Player 3
+  <!-- P3 score -->
+  Current Turn
+
+  Player 4
+  <!-- P4 score -->
+  Current Turn
+
+  <!-- Multiplayer scores start -->
+
+  <!-- Solo game time and moves counter start -->
+
+  Time
+  <!-- Time elapsed -->
+
+  Moves
+  <!-- Moves total -->
+
+  <!-- Solo game time and moves counter end -->
+
+  <!-- Game board end -->
+
+
+
+
+    
+
+<script src="./assets/js/app.js"></script>
 </body>
 </html>
