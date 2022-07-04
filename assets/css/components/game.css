@@ -1,9 +1,3 @@
-/* Error: Undefined variable.
- *   ,
- * 2 |     background-color: $primary900;
- *   |                       ^^^^^^^^^^^
- *   '
- *   src/sass/components/game.scss 2:20  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",

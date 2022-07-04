@@ -9,7 +9,12 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 		<title>Emoji Memory Game</title>
 	</head>
+
+
 	<body class="in-setup">
+
+
+    <!--Header and Logo with menu-->
 		<header class="header">
 			<h1 class="logo">memory</h1>
 			<nav class="menu ml-auto">
@@ -18,6 +23,8 @@
 				<button class="button onDesktop" onclick="newGame()">New Game</button>
 			</nav>
 		</header>
+
+
 		<nav class="menu-mobile-wrapper ml-auto">
 			<div class="menu-mobile bg-white">
 				<button class="button accent" onclick="restart()">Restart</button>
@@ -25,8 +32,12 @@
 				<button class="button" onclick="handleMenuMobile()">Resume Game</button>
 			</div>
 		</nav>
+
+    <!-- Game setup start -->
 		<section id="setup" class="bg-white setup">
 			<form class="setup-form game-options" name="game-options">
+
+        <!--Theme Select-->
 				<h2 class="panel-title">Select Theme</h2>
 				<div class="panel-form panel__theme">
 					<div class="input-radio form-group">
@@ -38,36 +49,51 @@
 						<label for="theme-icons">Icons</label>
 					</div>
 				</div>
+
+        <!--Multiplayer Select -->
 				<h2 class="panel-title">Numbers of players</h2>
 				<div class="panel-form panel__players">
+
+          <!-- P1 -->
 					<div class="input-radio form-group">
 						<input type="radio" id="players-one" name="players" value="1" checked="checked" />
 						<label for="players-one">1</label>
 					</div>
+
+           <!-- P2 -->
 					<div class="input-radio form-group">
 						<input type="radio" id="players-two" name="players" value="2" />
 						<label for="players-two">2</label>
 					</div>
+
+           <!-- P3 -->
 					<div class="input-radio form-group">
 						<input type="radio" id="players-three" name="players" value="3" />
 						<label for="players-three">3</label>
 					</div>
+
+            <!-- P4 -->
 					<div class="input-radio form-group">
 						<input type="radio" id="players-four" name="players" value="4" />
 						<label for="players-four">4</label>
 					</div>
 				</div>
+
+          <!--Board Size select-->
 				<h2 class="panel-title">Grid Size</h2>
 				<div class="panel-form panel__size">
 					<div class="input-radio form-group">
 						<input type="radio" id="size-four" name="size" value="4" checked="checked" />
 						<label for="size-four">4x4</label>
 					</div>
+
 					<div class="input-radio form-group">
 						<input type="radio" id="size-six" name="size" value="6" />
 						<label for="size-six">6x6</label>
 					</div>
 				</div>
+
+
 				<div class="panel-submit panel__start">
 					<div class="input-radio form-group">
 						<button class="start-game" type="submit">Start Game</button>
@@ -75,7 +101,12 @@
 				</div>
 			</form>
 		</section>
+      <!-- Game setup end -->
+
+  <!-- Game board start -->
 		<section class="board"></section>
+
+
 		<section class="scores"></section>
 
 		<section class="popup-wrapper">
@@ -87,6 +118,6 @@
 				</div>
 			</div>
 		</section>
-		<script src=""></script>
+		<script src="./assets/js/script.js"></script>
 	</body>
 </html>

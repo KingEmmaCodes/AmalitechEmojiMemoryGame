@@ -1,9 +1,3 @@
-/* Error: Undefined variable.
- *   ,
- * 8 |     color: $primary600;
- *   |            ^^^^^^^^^^^
- *   '
- *   src/sass/components/setup.scss 8:9  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",

@@ -1,4 +1,4 @@
-// I am creating a memory game
+// KEY VARIABLES
 
 const submit = document.querySelector(".start-game");
 const setup = document.querySelector(".setup");
@@ -9,29 +9,29 @@ var interval;
 var sec = 1;
 var min = 0;
 
-const icons =
-  // random font-awesome icons
-  [
-    "fa-face-angry",
-    "fa-face-grimace",
-    "fa-face-frown",
-    "fa-face-grin",
-    "fa-face-grin-hearts",
-    "fa-face-kiss",
-    "fa-face-rolling-eyes",
-    "fa-face-flushed",
-    "fa-face-smile",
-    "fa-face-surprise",
-    "fa-face-smile-hearts",
-    "fa-face-sad-cry",
-    "fa-face-smile-wink",
-    "fa-face-sad-tear",
-    "fa-face-meh-blank",
-    "fa-face-grin-tongue",
-    "fa-face-meh",
-    "fa-face-grin-tears",
-  ];
+// EMOJI ICONS
+const icons = [
+  "fa-face-angry",
+  "fa-face-grimace",
+  "fa-face-frown",
+  "fa-face-grin",
+  "fa-face-grin-hearts",
+  "fa-face-kiss",
+  "fa-face-rolling-eyes",
+  "fa-face-flushed",
+  "fa-face-smile",
+  "fa-face-surprise",
+  "fa-face-smile-hearts",
+  "fa-face-sad-cry",
+  "fa-face-smile-wink",
+  "fa-face-sad-tear",
+  "fa-face-meh-blank",
+  "fa-face-grin-tongue",
+  "fa-face-meh",
+  "fa-face-grin-tears",
+];
 
+//CARD CLASS
 class Card {
   constructor(theme, value, order) {
     this.theme = theme;
@@ -41,6 +41,8 @@ class Card {
     this.found = false;
   }
 }
+
+//GAME CLASS
 class Game {
   constructor(players, theme, size) {
     this.players = players;
@@ -54,6 +56,7 @@ class Game {
     this.playerTurn = 1;
   }
 
+  //CREATING THE CARDS UNTO THE BOARD
   createCards() {
     for (let i = 0; i < 2; i++) {
       for (let i = 0; i < (this.size * this.size) / 2; i++) {
@@ -61,12 +64,16 @@ class Game {
       }
     }
   }
+
+  // CARD RANDOMIZATION
   shuffleCards() {
     this.board.sort(() => Math.random() - 0.5);
     this.board.forEach((card, index) => {
       card.order = index;
     });
   }
+
+  //CREATING THE BOARD
   createBoard() {
     let cards;
     if ((cards = document.querySelectorAll(".card"))) {
@@ -87,6 +94,8 @@ class Game {
     this.boundEventHandler = this.handleClick.bind(this);
     board.addEventListener("click", this.boundEventHandler);
   }
+
+  // SCORES AND TIME KEEPING
   setScores() {
     const scores = document.querySelector(".scores");
     if (this.players == 1) {
@@ -111,6 +120,8 @@ class Game {
       }
     }
   }
+
+  // CHECKING FOR A MATCH
   compareMoves() {
     if (this.currentMoves.length === 2) {
       this.move++;
@@ -147,6 +158,7 @@ class Game {
     }
   }
 
+  // WINNING SORT
   sortWinners() {
     this.score.sort((a, b) => b.value - a.value);
     this.score.forEach((score, index) => {
@@ -154,6 +166,8 @@ class Game {
     });
     console.log(this.score);
   }
+
+  // WINNER MODALS
   checkWin() {
     if (this.board.filter((card) => card.found === false).length === 0) {
       stopChrono();
@@ -228,6 +242,8 @@ class Game {
       this.updateScores();
     }
   }
+
+  // CONTROLLING PLAYER TURNS
   setPlayerTurn(player) {
     if (player > this.players && this.players > 1) this.playerTurn = 1;
     else this.playerTurn = player;
@@ -252,6 +268,7 @@ submit.addEventListener("click", function (e) {
   startGame();
 });
 
+// SINGLE PLAYER TIME KEEPING
 function launchChrono() {
   var chrono = document.querySelector(".time-number");
   interval = setInterval(function () {
@@ -286,6 +303,8 @@ function startGame() {
 
   gameState = "ingame";
 }
+
+// RESTARTING THE GAME
 function restart() {
   if (gameState !== "setup") {
     document.body.classList.remove("game-finished");

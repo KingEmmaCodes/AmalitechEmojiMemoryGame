@@ -1,9 +1,3 @@
-/* Error: Undefined variable.
- *    ,
- * 15 |         margin-top: $spacing;
- *    |                     ^^^^^^^^
- *    '
- *   src/sass/components/header.scss 15:15  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
