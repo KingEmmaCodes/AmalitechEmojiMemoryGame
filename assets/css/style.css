@@ -449,7 +449,7 @@ table {
   height: 100%;
   top: 0;
   user-select: none;
-  background-color: #dfe7ec;
+  background-color: teal;
   transform: rotateY(180deg);
   -webkit-backface-visibility: hidden;
   /* Safari */
